@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption|Roboto&subset=cyrillic");
+body {
+  font-family: Roboto, serif;
+  background: #FFF3D7; }
+
+h1 {
+  font-family: "PT Sans Caption", serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #111111; }
+
+h2 {
+  font-family: "PT Sans Caption", serif;
+  font-style: normal;
+  font-size: 36px;
+  color: #4E4B42; }
+
+h3 {
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 24px;
+  color: #1B1B1B; }
+
+input[type=button] {
+  width: 264px;
+  height: 60px;
+  border: none;
+  background: #F2A711;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  outline: none; }
+  input[type=button]:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); }
+  input[type=button]:active {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); }
+
+.container {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+.headline {
+  display: flex;
+  justify-content: stretch; }
+  .headline .line {
+    height: 1px;
+    min-width: 10%;
+    background: #F2A711;
+    margin-top: 23px;
+    flex-grow: 1; }
+  .headline h2 {
+    width: auto;
+    text-align: center;
+    padding: 0 40px; }
+
+.main {
+  background: url("../img/main.png") center;
+  height: 900px; }
+  .main .container {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .main header {
+    padding-top: 60px; }
+    .main header .logo {
+      color: #F2A711;
+      margin-top: 8px; }
+    .main header .menu {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 8px; }
+      .main header .menu .item {
+        margin: 0 5px; }
+        .main header .menu .item a {
+          color: #111111;
+          font-size: 16px; }
+          .main header .menu .item a:hover {
+            color: #F2A711;
+            cursor: pointer;
+            text-decoration: none; }
+    .main header .tel {
+      text-align: right;
+      font-size: 24px;
+      color: #111111; }
+  .main h1 {
+    margin-top: 230px;
+    margin-bottom: 40px; }
+
+.services {
+  background: #FFF3D7; }
+  .services .col-3 {
+    margin-top: 80px; }
+    .services .col-3 img {
+      width: 100%; }
+    .services .col-3 .text {
+      text-align: center;
+      height: 70px;
+      background: #4F4F4F;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+
+.call {
+  background: url("../img/call-background.png");
+  text-align: center; }
+  .call input {
+    margin-top: 60px; }
+
+.works {
+  background: url("../img/works-background.png"); }
+  .works h2 {
+    color: #ffffff; }
+
+.advantages .container {
+  background: url("../img/advantages.png") no-repeat center 350px;
+  background-size: auto; }
+.advantages .advantages1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px; }
+.advantages .advantages2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px; }
+.advantages .advantages3 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 300px; }
+.advantages .advantages-block {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: #5b5b5b;
+  text-align: center !important;
+  transition: all 0.3s ease-out 0.1s !important;
+  overflow: hidden; }
+  .advantages .advantages-block .advantages-head {
+    display: none;
+    color: #F2A711;
+    font-size: 24px; }
+  .advantages .advantages-block .advantages-text {
+    display: none;
+    color: white;
+    font-size: 16px; }
+  .advantages .advantages-block img {
+    margin-top: 25px;
+    height: 50px; }
+  .advantages .advantages-block:hover {
+    width: 250px;
+    height: 250px;
+    border-radius: 19px;
+    margin-left: -30px;
+    margin-right: -120px;
+    padding: 20px !important;
+    color: #F2A711;
+    margin-bottom: -150px; }
+    .advantages .advantages-block:hover .advantages-head {
+      display: inline; }
+    .advantages .advantages-block:hover .advantages-text {
+      display: inline; }
+    .advantages .advantages-block:hover img {
+      display: none; }
+
+.forms {
+  background: url("../img/call-background.png"); }
+  .forms form .d-flex {
+    justify-content: space-between; }
+  .forms form input, .forms form textarea, .forms form label {
+    background: #4F4F4F;
+    border: 1px solid #F2A711;
+    color: white;
+    padding: 15px 10px;
+    outline: none;
+    width: 264px; }
+  .forms form label {
+    margin: 0;
+    color: #F2A711; }
+  .forms form input[type=file] {
+    display: none; }
+  .forms form textarea {
+    width: 100%;
+    height: 110px;
+    resize: none;
+    margin-bottom: -5px; }
+  .forms form .btns {
+    padding: 5px;
+    background: #4F4F4F;
+    display: inline-block;
+    margin-top: 40px; }
+  .forms form .btns:last-child {
+    display: block; }
+
+.footer {
+  background: #1B1B1B;
+  color: white; }
+  .footer .container {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between; }
+    .footer .container .item {
+      margin-top: 20px; }
+    .footer .container .contact img {
+      margin-right: 10px; }
+
+/*# sourceMappingURL=index.css.map */
