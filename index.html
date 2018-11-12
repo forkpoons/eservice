@@ -6,6 +6,7 @@
     <title></title>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
 </head>
 <body>
     <div class="container-fluid main">
@@ -14,11 +15,11 @@
                 <div class="row">
                     <div class="logo col-3">Ё-авто сервис</div>
                     <div class="menu col-5">
-                        <div class="item"><a href="#">Услуги</a></div>
-                        <div class="item"><a href="#">Работы</a></div>
-                        <div class="item"><a href="#">Преимущества</a></div>
-                        <div class="item"><a href="#">Цены</a></div>
-                        <div class="item"><a href="#">Контакты</a></div>
+                        <div class="item"><a href="#services">Услуги</a></div>
+                        <div class="item"><a href="#works">Работы</a></div>
+                        <div class="item"><a href="#advantages">Преимущества</a></div>
+                        <div class="item"><a href="#price">Цены</a></div>
+                        <div class="item"><a href="#contact">Контакты</a></div>
                     </div>
                     <div class="tel col-4">23-11-18, 8-909-543-11-18</div>
                 </div>
@@ -28,7 +29,7 @@
             <h3>Выезд и оценка автомобиля в черте<br> города — бесплатно</h3>
         </div>
     </div>
-    <div class="container-fluid services">
+    <div class="container-fluid services" id="services">
         <div class="container">
             <div class="headline">
                 <div class="line"></div>
@@ -38,55 +39,91 @@
             <div class="row">
                 <div class="col-3">
                     <img src="img/services1.png" alt="">
-                    <div class="text">Стапельные работы</div>
+                    <div class="text">
+                        Стапельные работы
+                        <span>Описание Описание Описание...</span>
+                    </div>
                 </div>
                 <div class="col-3">
                     <img src="img/services2.png" alt="">
-                    <div class="text">Ремонт бамперов</div>
+                    <div class="text">
+                        Ремонт бамперов
+                        <span>Описание Описание Описание...</span></div>
                 </div>
                 <div class="col-3">
                     <img src="img/services3.png" alt="">
-                    <div class="text">Покраска</div>
+                    <div class="text">
+                        Покраска
+                        <span>Описание Описание Описание...</span></div>
                 </div>
                 <div class="col-3">
                     <img src="img/services4.png" alt="">
-                    <div class="text">Полировка</div>
+                    <div class="text">
+                        Полировка
+                        <span>Описание Описание Описание...</span></div>
                 </div>
                 <div class="col-3">
                     <img src="img/services5.png" alt="">
-                    <div class="text">Локальный ремонт</div>
+                    <div class="text">
+                        Локальный ремонт
+                        <span>Описание Описание Описание...</span></div>
                 </div>
                 <div class="col-3">
                     <img src="img/services6.png" alt="">
-                    <div class="text">Жестяные работы</div>
+                    <div class="text">
+                        Жестяные работы
+                        <span>Описание Описание Описание...</span></div>
                 </div>
                 <div class="col-3">
                     <img src="img/services7.png" alt="">
-                    <div class="text">Замена стекол</div>
+                    <div class="text">Замена стекол
+                        <span>Описание Описание Описание...</span></div>
                 </div>
                 <div class="col-3">
                     <img src="img/services8.png" alt="">
-                    <div class="text">Комплектование запчастями</div>
+                    <div class="text">
+                        Комплектование запчастями
+                        <span>Описание Описание Описание...</span></div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="container-fluid call">
         <div class="container">
             <h2>Позвоните сейчас и запишитесь на бесплатный осмотр</h2>
-            <input type="button" value="Запись на ремонт">
+            <input type="button" value="Запись на ремонт" data-toggle="modal" data-target="#exampleModal" class="btn-yellow">
         </div>
     </div>
-    <div class="container-fluid works">
+
+    <div class="container-fluid works" id="works">
         <div class="container">
             <div class="headline">
                 <div class="line"></div>
                 <h2>Наши работы</h2>
                 <div class="line"></div>
             </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-item-card"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-item-card"></div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="container-fluid advantages">
+    <div class="container-fluid advantages" id="advantages">
         <div class="container">
             <div class="headline">
                 <div class="line"></div>
@@ -145,13 +182,52 @@
                             </label>
                         </div>
                     </div>
-                    <div class="btns"><textarea placeholder="Описание" class="" name="name" form="form2" ></textarea></div>
+                    <div class="btns-t"><textarea placeholder="Описание" class="" name="name" form="form2" ></textarea></div>
+                    <input type="submit" class="btn-yellow" value="Отправить" form="form2">
                 </form>
             </div>
         </div>
     </div>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e7935eac1b4f3776bec6c61ebdca2d63d58c306f219e54727c7ec001203ad35&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
-    <div class="container-fluid footer">
+
+    <div class="container-fluid price" id="price">
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <div class="d-flex justify-content-between">
+                        <h2>Цены</h2>
+                        <div class="btns">
+                            <select class="select">
+                                <option>Покраска</option>
+                                <option>Ремонт</option>
+                                <option>Покраска</option>
+                                <option>Ремонт</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-item-1">Бампер</div>
+                        <div class="price-item-2">9 999 p</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-item-1">Бампер</div>
+                        <div class="price-item-2">9 999 p</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-item-1">Бампер</div>
+                        <div class="price-item-2">9 999 p</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-item-1">Бампер</div>
+                        <div class="price-item-2">9 999 p</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e7935eac1b4f3776bec6c61ebdca2d63d58c306f219e54727c7ec001203ad35&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>-->
+
+    <div class="container-fluid footer" id="contact">
         <div class="container">
             <div>
                 <div class="item">© 2018 Ё-авто сервис</div>
@@ -174,36 +250,28 @@
             </div>
         </div>
     </div>
-    <script>
-        const R_ACCEPT_IMAGE = /\.(gif|jpe?g|png|bmp)$/i;
-        const input = document.getElementById('uploaded-file1');
-        input.onchange = function () {
-            let status = true;
-            let a = true;
-            let i = 0;
-            while (a){
-                status = R_ACCEPT_IMAGE.test(input.files[i].name);
-                if(!status || i === input.files.length-1)
-                    a = false;
-                i++;
-            }
 
-            if(!status)
-                alert('Выберите только изображения');
-            else {
-                const file = document.getElementById('uploaded-file1').files[0];
-                if (file) {
-                    if (document.getElementById('uploaded-file1').files.length === 1) {
-                        if (file.name.length < 30)
-                            document.getElementById('texts').innerHTML = '' + file.name;
-                        else
-                            document.getElementById('texts').innerHTML = '...' + file.name.slice(-27);
-                    }
-                    else
-                        document.getElementById('texts').innerHTML = 'Выбранно изображений: ' + document.getElementById('uploaded-file1').files.length;
-                }
-            }
-        };
-    </script>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog appointment" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="btns">
+                        <input type="text" placeholder="Телефон" class="btn-grey">
+                    </div>
+                    <div class="btns">
+                        <input type="text" placeholder="Дата и время" class="btn-grey" id="demo" >
+                    </div>
+                    <input type="button" value="Записаться" class="btn-yellow">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

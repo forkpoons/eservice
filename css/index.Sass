@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption|Roboto&subset=cyrillic')
+$yellow: #F2A711
+$black: #111111
+$grey: #1B1B1B
+$grey3: #444444
+$grey2: #4F4F4F
+$light-grey: #4E4B42
+$beige: #FFF3D7
+$white: #ffffff
+
+.btn-primary
+  background: $yellow
+  border: 1px solid $yellow
+  &:hover, &:active
+    background-color: $yellow !important
+    border: 1px solid $yellow
+body
+  font-family: Roboto, serif
+  background: $beige
+h1
+  font-family: "PT Sans Caption", serif
+  font-style: normal
+  font-weight: normal
+  line-height: normal
+  font-size: 60px
+  text-transform: uppercase
+  color: $black
+h2
+  font-family: "PT Sans Caption", serif
+  font-style: normal
+  font-size: 36px
+  color: $light-grey
+h3
+  font-family: Roboto, serif
+  font-style: normal
+  font-weight: normal
+  line-height: normal
+  font-size: 24px
+  color: $grey
+.btn-yellow
+  width: 264px
+  height: 60px
+  border: none
+  background: $yellow !important
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2)
+  outline: none
+  &:hover
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25)
+
+  &:active
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25)
+.container
+  padding:
+    top: 120px
+    bottom: 120px
+.headline
+  display: flex
+  justify-content: stretch
+  .line
+    height: 1px
+    min-width: 10%
+    background: $yellow
+    margin-top: 23px
+    flex-grow: 1
+  h2
+    width: auto
+    text-align: center
+    padding: 0 40px
+.main
+  background: url("../img/main.png") center
+  height: 900px
+  .container
+    padding-top: 0
+    padding-bottom: 0
+  header
+    padding-top: 60px
+    .logo
+      color: $yellow
+      margin-top: 8px
+    .menu
+      display: flex
+      justify-content: space-around
+      margin-top: 8px
+      .item
+        a
+          color: $black
+          font-size: 16px
+          &:hover
+            color: $yellow
+            cursor: pointer
+            text-decoration: none
+        margin: 0 5px
+    .tel
+      text-align: right
+      font-size: 24px
+      color: $black
+
+  h1
+    margin-top: 230px
+    margin-bottom: 40px
+
+.services
+  background: $beige
+  .col-3
+    margin-top: 80px
+    transition: all 0.3s !important
+    height: 314px
+    img
+      width: 100%
+      height: auto
+    .text
+      text-align: center
+      height: 70px
+      background: $grey2
+      color: $yellow
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      padding-top: 25px
+      transition: all 0.3s !important
+      margin-top: 0
+      position: relative
+      top: 0
+      width: 100%
+      overflow: hidden
+      &:hover
+        height: 314px
+        top: -244px
+      span
+        margin-top: 15px
+        padding: 15px
+        color: $white
+        width: 100%
+.call
+  background: url("../img/call-background.png")
+  text-align: center
+  input
+    margin-top: 60px
+
+.works
+  background: url("../img/works-background.png")
+  h2
+    color: $white
+  .headline
+    margin-bottom: 60px
+  .carousel-item-card
+    background: url("../img/car.png") center center no-repeat
+    height: 600px
+  .carousel-control-prev-icon
+    background-image: url("../img/arrow-prev.png")
+    width: 20px
+    height: 50px
+  .carousel-control-next-icon
+    background-image: url("../img/arrow-next.png")
+    width: 20px
+    height: 50px
+
+.advantages
+  .container
+    background: url("../img/advantages.png") no-repeat center 350px
+    background-size: auto
+  .advantages1
+    display: flex
+    justify-content: center
+    margin-top: 60px
+  .advantages2
+    display: flex
+    justify-content: space-between
+    margin-top: 70px
+  .advantages3
+    display: flex
+    justify-content: space-around
+    margin-top: 300px
+  .advantages-block
+    width: 100px
+    height: 100px
+    border-radius: 50px
+    background: #5b5b5b
+    text-align: center !important
+    transition: all 0.3s ease-out 0.1s !important
+    overflow: hidden
+    .advantages-head
+      display: none
+      color: $yellow
+      font-size: 24px
+    .advantages-text
+      display: none
+      color: $white
+      font-size: 16px
+    img
+      margin-top: 25px
+      height: 50px
+    &:hover
+      width: 250px
+      height: 250px
+      border-radius: 19px
+      margin-left: -30px
+      margin-right: -120px
+      padding: 20px !important
+      color: $yellow
+      margin-bottom: -150px
+      .advantages-head
+        display: inline
+      .advantages-text
+        display: inline
+      img
+        display: none
+
+.forms
+  background: url("../img/call-background.png")
+  form
+    .d-flex
+      justify-content: space-between
+    input[type=text], textarea, label
+      background: $grey2
+      border: 1px solid $yellow
+      color: $white
+      padding: 15px 10px
+      outline: none
+      width: 264px
+    label
+      margin: 0
+      color: $yellow
+    input[type=file]
+      display: none
+    textarea
+      width: 100%
+      height: 110px
+      resize: none
+      margin-bottom: -5px
+    .btns
+      padding: 5px
+      background: $grey2
+      display: inline-block
+      margin-top: 40px
+    .btns-t
+      display: block
+      padding: 5px
+      background: $grey2
+      margin: 40px 0
+
+.price
+  background: $grey2 url("../img/price-background.png") 50vw center no-repeat
+  height: 710px
+  color: $white
+  h2
+    color: $white
+  .d-flex
+    margin-bottom: 60px
+  .btns
+    padding: 5px
+    background: $grey3
+    height: 45px
+  .select
+    /*for WebKit*/
+    -webkit-appearance: none
+    /* for FF */
+    -moz-appearance: none
+    text-indent: 0.01px
+    text-overflow: ''
+    /* for IE */
+    -ms-appearance: none
+    appearance: none!important
+    border: 1px solid $yellow
+    color: $white
+    padding: 6px
+    outline: none
+    width: 264px
+    height: 34px
+    background: $grey3 url('../img/Polygon.png') no-repeat 95% center
+  &-item
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid $yellow
+    padding: 15px 0 5px
+
+.footer
+  background: $grey
+  color: $white
+  .container
+    padding: 80px 0
+    display: flex
+    justify-content: space-between
+    .item
+      margin-top: 20px
+    .contact
+      img
+        margin-right: 10px
+
+iframe
+  margin-bottom: -10px
+
+.appointment
+  width: 364px
+  height: 380px
+  margin: 10% auto
+  .modal-content
+    background: $beige
+    padding:
+      top: 75px
+      bottom: 75px
+    .btns
+      padding: 5px
+      background: $grey2
+      display: inline-block
+      margin: 10px 50px
+    input.btn-grey
+      background: $grey2
+      border: 1px solid $yellow
+      color: $white
+      padding: 15px 10px
+      outline: none
+      width: 254px
+    .btn-yellow
+      margin: 10px 50px
