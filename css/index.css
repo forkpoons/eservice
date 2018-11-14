@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption|Roboto&subset=cyrillic");
+.color-yellow {
+  color: #F2A711; }
+
 .btn-primary {
   background: #F2A711;
   border: 1px solid #F2A711; }
@@ -18,6 +21,9 @@ h1 {
   font-size: 60px;
   text-transform: uppercase;
   color: #111111; }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 40px; } }
 
 h2 {
   font-family: "PT Sans Caption", serif;
@@ -39,7 +45,11 @@ h3 {
   border: none;
   background: #F2A711 !important;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  outline: none; }
+  outline: none;
+  font-size: 20px; }
+  @media (max-width: 768px) {
+    .btn-yellow {
+      width: 100%; } }
   .btn-yellow:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); }
   .btn-yellow:active {
@@ -58,6 +68,9 @@ h3 {
     background: #F2A711;
     margin-top: 23px;
     flex-grow: 1; }
+    @media (max-width: 768px) {
+      .headline .line {
+        display: none; } }
   .headline h2 {
     width: auto;
     text-align: center;
@@ -73,16 +86,16 @@ h3 {
     padding-top: 60px; }
     .main header .logo {
       color: #F2A711;
-      margin-top: 8px; }
+      font-size: 24px; }
     .main header .menu {
       display: flex;
       justify-content: space-around;
-      margin-top: 8px; }
+      margin-top: 2px; }
       .main header .menu .item {
         margin: 0 5px; }
         .main header .menu .item a {
           color: #111111;
-          font-size: 16px; }
+          font-size: 20px; }
           .main header .menu .item a:hover {
             color: #F2A711;
             cursor: pointer;
@@ -97,36 +110,39 @@ h3 {
 
 .services {
   background: #FFF3D7; }
-  .services .col-3 {
+  .services .services-block {
     margin-top: 80px;
     transition: all 0.3s !important;
     height: 314px; }
-    .services .col-3 img {
-      width: 100%;
-      height: auto; }
-    .services .col-3 .text {
-      text-align: center;
-      height: 70px;
-      background: #4F4F4F;
-      color: #F2A711;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      padding-top: 25px;
-      transition: all 0.3s !important;
-      margin-top: 0;
-      position: relative;
-      top: 0;
-      width: 100%;
-      overflow: hidden; }
-      .services .col-3 .text:hover {
-        height: 314px;
-        top: -244px; }
-      .services .col-3 .text span {
-        margin-top: 15px;
-        padding: 15px;
-        color: #ffffff;
-        width: 100%; }
+  .services .services-card {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    height: 313px; }
+  .services img {
+    width: 100%;
+    height: auto; }
+  .services .text {
+    text-align: center;
+    height: 70px;
+    background: #4F4F4F;
+    color: #F2A711;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 25px;
+    transition: all 0.3s !important;
+    margin-top: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    overflow: hidden; }
+    .services .text:hover {
+      height: 314px;
+      top: -244px; }
+    .services .text span {
+      margin-top: 15px;
+      padding: 15px;
+      color: #ffffff;
+      width: 100%; }
 
 .call {
   background: url("../img/call-background.png");
@@ -142,7 +158,22 @@ h3 {
     margin-bottom: 60px; }
   .works .carousel-item-card {
     background: url("../img/car.png") center center no-repeat;
-    height: 600px; }
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff; }
+    .works .carousel-item-card .card-1 {
+      display: flex;
+      width: 100%;
+      padding: 40px; }
+    .works .carousel-item-card .card-2 {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 40px; }
+      .works .carousel-item-card .card-2 .card-22 {
+        text-align: right; }
   .works .carousel-control-prev-icon {
     background-image: url("../img/arrow-prev.png");
     width: 20px;
@@ -153,91 +184,125 @@ h3 {
     height: 50px; }
 
 .advantages .container {
-  background: url("../img/advantages.png") no-repeat center 350px;
+  background: url("../img/advantages.png") no-repeat center 465px;
   background-size: auto; }
-.advantages .advantages1 {
+  @media (max-width: 768px) {
+    .advantages .container {
+      background: #FFF3D7; } }
+.advantages1 {
   display: flex;
   justify-content: center;
   margin-top: 60px; }
-.advantages .advantages2 {
+.advantages2 {
   display: flex;
   justify-content: space-between;
   margin-top: 70px; }
-.advantages .advantages3 {
+.advantages3 {
   display: flex;
   justify-content: space-around;
   margin-top: 300px; }
-.advantages .advantages-block {
+.advantages11 {
+  position: relative;
+  text-align: center;
+  margin-top: 20px; }
+.advantages33 {
+  width: 300px; }
+.advantages-block {
+  position: relative;
   width: 100px;
   height: 100px;
   border-radius: 50px;
   background: #5b5b5b;
   text-align: center !important;
-  transition: all 0.3s ease-out 0.1s !important;
-  overflow: hidden; }
-  .advantages .advantages-block .advantages-head {
+  transition: all 0.2s ease-out 0.1s !important;
+  overflow: hidden;
+  z-index: 1100;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+  .advantages-block .advantages-head {
     display: none;
     color: #F2A711;
     font-size: 24px; }
-  .advantages .advantages-block .advantages-text {
+  .advantages-block .advantages-text {
     display: none;
     color: #ffffff;
     font-size: 16px; }
-  .advantages .advantages-block img {
+  .advantages-block img {
     margin-top: 25px;
     height: 50px; }
-  .advantages .advantages-block:hover {
-    width: 250px;
+  .advantages-block:hover {
+    width: 280px;
     height: 250px;
     border-radius: 19px;
-    margin-left: -30px;
-    margin-right: -120px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px !important;
     color: #F2A711;
     margin-bottom: -150px; }
-    .advantages .advantages-block:hover .advantages-head {
+    .advantages-block:hover .advantages-head {
       display: inline; }
-    .advantages .advantages-block:hover .advantages-text {
+    .advantages-block:hover .advantages-text {
       display: inline; }
-    .advantages .advantages-block:hover img {
+    .advantages-block:hover img {
       display: none; }
+
+.carousel-control-prev {
+  justify-content: left; }
+
+.carousel-control-next {
+  justify-content: flex-end; }
 
 .forms {
   background: url("../img/call-background.png"); }
-  .forms form .d-flex {
-    justify-content: space-between; }
-  .forms form input[type=text], .forms form textarea, .forms form label {
-    background: #4F4F4F;
-    border: 1px solid #F2A711;
-    color: #ffffff;
-    padding: 15px 10px;
-    outline: none;
-    width: 264px; }
-  .forms form label {
-    margin: 0;
-    color: #F2A711; }
-  .forms form input[type=file] {
-    display: none; }
-  .forms form textarea {
-    width: 100%;
-    height: 110px;
-    resize: none;
-    margin-bottom: -5px; }
-  .forms form .btns {
-    padding: 5px;
-    background: #4F4F4F;
-    display: inline-block;
+  .forms form {
     margin-top: 40px; }
-  .forms form .btns-t {
-    display: block;
-    padding: 5px;
-    background: #4F4F4F;
-    margin: 40px 0; }
+    .forms form .d-flex {
+      justify-content: space-between;
+      flex-wrap: wrap; }
+    .forms form input[type=text], .forms form textarea, .forms form label {
+      background: #4F4F4F;
+      border: 1px solid #F2A711;
+      color: #ffffff;
+      padding: 15px 10px;
+      outline: none;
+      width: 264px; }
+      @media (max-width: 768px) {
+        .forms form input[type=text], .forms form textarea, .forms form label {
+          width: 100%; } }
+    .forms form label {
+      margin: 0;
+      color: #F2A711; }
+    .forms form input[type=file] {
+      display: none; }
+    .forms form textarea {
+      width: 100%;
+      height: 110px;
+      resize: none;
+      margin-bottom: -5px; }
+    .forms form .btns {
+      padding: 5px;
+      background: #4F4F4F;
+      display: inline-block;
+      margin-top: 40px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+      @media (max-width: 768px) {
+        .forms form .btns {
+          width: 100%; } }
+    .forms form .btns-t {
+      display: block;
+      padding: 5px;
+      background: #4F4F4F;
+      margin: 40px 0;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
 
 .price {
-  background: #4F4F4F url("../img/price-background.png") 50vw center no-repeat;
+  background: #4F4F4F;
   height: 710px;
   color: #ffffff; }
+  @media (min-width: 768px) {
+    .price {
+      background: #4F4F4F url("../img/price-background.png") 50vw center no-repeat; } }
   .price h2 {
     color: #ffffff; }
   .price .d-flex {
@@ -257,12 +322,14 @@ h3 {
     -ms-appearance: none;
     appearance: none !important;
     border: 1px solid #F2A711;
-    color: #ffffff;
+    color: #F2A711;
     padding: 6px;
     outline: none;
     width: 264px;
     height: 34px;
     background: #444444 url("../img/Polygon.png") no-repeat 95% center; }
+    .price .select option {
+      color: #ffffff; }
   .price-item {
     display: flex;
     justify-content: space-between;
@@ -271,7 +338,8 @@ h3 {
 
 .footer {
   background: #1B1B1B;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 14px; }
   .footer .container {
     padding: 80px 0;
     display: flex;
@@ -305,6 +373,7 @@ iframe {
       outline: none;
       width: 254px; }
     .appointment .modal-content .btn-yellow {
-      margin: 10px 50px; }
+      margin: 10px 50px;
+      width: calc( 100% - 100px); }
 
 /*# sourceMappingURL=index.css.map */

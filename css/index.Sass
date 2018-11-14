@@ -8,6 +8,8 @@ $light-grey: #4E4B42
 $beige: #FFF3D7
 $white: #ffffff
 
+.color-yellow
+  color: $yellow
 .btn-primary
   background: $yellow
   border: 1px solid $yellow
@@ -25,6 +27,8 @@ h1
   font-size: 60px
   text-transform: uppercase
   color: $black
+  @media (max-width: 768px)
+    font-size: 40px
 h2
   font-family: "PT Sans Caption", serif
   font-style: normal
@@ -44,6 +48,9 @@ h3
   background: $yellow !important
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2)
   outline: none
+  font-size: 20px
+  @media (max-width: 768px)
+    width: 100%
   &:hover
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25)
 
@@ -62,6 +69,8 @@ h3
     background: $yellow
     margin-top: 23px
     flex-grow: 1
+    @media (max-width: 768px)
+      display: none
   h2
     width: auto
     text-align: center
@@ -76,15 +85,15 @@ h3
     padding-top: 60px
     .logo
       color: $yellow
-      margin-top: 8px
+      font-size: 24px
     .menu
       display: flex
       justify-content: space-around
-      margin-top: 8px
+      margin-top: 2px
       .item
         a
           color: $black
-          font-size: 16px
+          font-size: 20px
           &:hover
             color: $yellow
             cursor: pointer
@@ -101,36 +110,39 @@ h3
 
 .services
   background: $beige
-  .col-3
+  .services-block
     margin-top: 80px
     transition: all 0.3s !important
     height: 314px
-    img
+  .services-card
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25)
+    height: 313px
+  img
+    width: 100%
+    height: auto
+  .text
+    text-align: center
+    height: 70px
+    background: $grey2
+    color: $yellow
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    padding-top: 25px
+    transition: all 0.3s !important
+    margin-top: 0
+    position: relative
+    top: 0
+    width: 100%
+    overflow: hidden
+    &:hover
+      height: 314px
+      top: -244px
+    span
+      margin-top: 15px
+      padding: 15px
+      color: $white
       width: 100%
-      height: auto
-    .text
-      text-align: center
-      height: 70px
-      background: $grey2
-      color: $yellow
-      display: flex
-      flex-direction: column
-      justify-content: flex-start
-      padding-top: 25px
-      transition: all 0.3s !important
-      margin-top: 0
-      position: relative
-      top: 0
-      width: 100%
-      overflow: hidden
-      &:hover
-        height: 314px
-        top: -244px
-      span
-        margin-top: 15px
-        padding: 15px
-        color: $white
-        width: 100%
 .call
   background: url("../img/call-background.png")
   text-align: center
@@ -146,6 +158,21 @@ h3
   .carousel-item-card
     background: url("../img/car.png") center center no-repeat
     height: 600px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    color: $white
+    .card-1
+      display: flex
+      width: 100%
+      padding: 40px
+    .card-2
+      display: flex
+      width: 100%
+      justify-content: space-between
+      padding: 40px
+      .card-22
+        text-align: right
   .carousel-control-prev-icon
     background-image: url("../img/arrow-prev.png")
     width: 20px
@@ -157,28 +184,42 @@ h3
 
 .advantages
   .container
-    background: url("../img/advantages.png") no-repeat center 350px
+    background: url("../img/advantages.png") no-repeat center 465px
     background-size: auto
-  .advantages1
+    @media (max-width: 768px)
+      background: $beige
+  &1
     display: flex
     justify-content: center
     margin-top: 60px
-  .advantages2
+  &2
     display: flex
     justify-content: space-between
     margin-top: 70px
-  .advantages3
+  &3
     display: flex
     justify-content: space-around
     margin-top: 300px
-  .advantages-block
+  &11
+    position: relative
+    text-align: center
+    margin-top: 20px
+  &33
+    width: 300px
+  &-block
+    position: relative
     width: 100px
     height: 100px
     border-radius: 50px
     background: #5b5b5b
     text-align: center !important
-    transition: all 0.3s ease-out 0.1s !important
+    transition: all 0.2s ease-out 0.1s !important
     overflow: hidden
+    z-index: 1100
+    margin:
+      left: auto
+      right: auto
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     .advantages-head
       display: none
       color: $yellow
@@ -191,11 +232,11 @@ h3
       margin-top: 25px
       height: 50px
     &:hover
-      width: 250px
+      width: 280px
       height: 250px
       border-radius: 19px
-      margin-left: -30px
-      margin-right: -120px
+      margin-left: auto
+      margin-right: auto
       padding: 20px !important
       color: $yellow
       margin-bottom: -150px
@@ -205,12 +246,17 @@ h3
         display: inline
       img
         display: none
-
+.carousel-control-prev
+  justify-content: left
+.carousel-control-next
+  justify-content: flex-end
 .forms
   background: url("../img/call-background.png")
   form
+    margin-top: 40px
     .d-flex
       justify-content: space-between
+      flex-wrap: wrap
     input[type=text], textarea, label
       background: $grey2
       border: 1px solid $yellow
@@ -218,6 +264,8 @@ h3
       padding: 15px 10px
       outline: none
       width: 264px
+      @media (max-width: 768px)
+        width: 100%
     label
       margin: 0
       color: $yellow
@@ -233,16 +281,22 @@ h3
       background: $grey2
       display: inline-block
       margin-top: 40px
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+      @media (max-width: 768px)
+        width: 100%
     .btns-t
       display: block
       padding: 5px
       background: $grey2
       margin: 40px 0
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
 
 .price
-  background: $grey2 url("../img/price-background.png") 50vw center no-repeat
+  background: $grey2
   height: 710px
   color: $white
+  @media (min-width: 768px)
+    background: $grey2 url("../img/price-background.png") 50vw center no-repeat
   h2
     color: $white
   .d-flex
@@ -262,12 +316,14 @@ h3
     -ms-appearance: none
     appearance: none!important
     border: 1px solid $yellow
-    color: $white
+    color: $yellow
     padding: 6px
     outline: none
     width: 264px
     height: 34px
     background: $grey3 url('../img/Polygon.png') no-repeat 95% center
+    option
+      color: $white
   &-item
     display: flex
     justify-content: space-between
@@ -277,6 +333,7 @@ h3
 .footer
   background: $grey
   color: $white
+  font-size: 14px
   .container
     padding: 80px 0
     display: flex
@@ -313,3 +370,4 @@ iframe
       width: 254px
     .btn-yellow
       margin: 10px 50px
+      width: calc( 100% - 100px)
