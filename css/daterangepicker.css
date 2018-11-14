@@ -377,7 +377,7 @@
       .daterangepicker.rtl .ranges, .daterangepicker.rtl .drp-calendar {
         text-align: right;
         float: right; } }
-@media (min-width: 730px) {
+@media (min-width: 768px) {
   .daterangepicker .ranges {
     width: auto; }
   .daterangepicker.ltr .ranges {
