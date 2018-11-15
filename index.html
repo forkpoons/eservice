@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Ё-авто сервис</title>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
@@ -14,16 +13,19 @@
     <div class="container-fluid main">
         <div class="container">
             <header>
-                <div class="row">
-                    <div class="logo col-3">Ё-авто сервис</div>
-                    <div class="menu col-5">
+                <div class="row navbar navbar-expand-md navbar-light">
+                    <div class="logo col">Ё-авто сервис</div>
+                    <div class="menu col collapse navbar-collapse" id="navbarmenu">
                         <div class="item"><a href="#services">Услуги</a></div>
                         <div class="item"><a href="#works">Работы</a></div>
                         <div class="item"><a href="#advantages">Преимущества</a></div>
                         <div class="item"><a href="#prices">Цены</a></div>
                         <div class="item"><a href="#contact">Контакты</a></div>
                     </div>
-                    <div class="tel col-4">23-11-18 &nbsp 8-909-543-11-18</div>
+                    <div class="tel col">23-11-18 &nbsp 8-909-543-11-18</div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
             </header>
 
@@ -39,11 +41,13 @@
                 <div class="line"></div>
             </div>
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-3 services-block" data-proportion-h="1.2274">
+                <div class="col-12 col-sm-6 col-md-3 services-block">
                     <div class="services-card">
                         <img src="img/services1.png" alt="">
                         <div class="text">
-                            Стапельные работы
+                            <div class="text-head">
+                                Стапельные работы
+                            </div>
                             <span>Описание Описание Описание...</span>
                         </div>
                     </div>
@@ -52,7 +56,9 @@
                     <div class="services-card">
                         <img src="img/services2.png" alt="">
                         <div class="text">
-                            Ремонт бамперов
+                            <div class="text-head">
+                                Ремонт бамперов
+                            </div>
                             <span>Описание Описание Описание...</span>
                         </div>
                     </div>
@@ -61,7 +67,9 @@
                     <div class="services-card">
                         <img src="img/services3.png" alt="">
                         <div class="text">
-                            Покраска
+                            <div class="text-head">
+                                Покраска
+                            </div>
                             <span>Описание Описание Описание...</span>
                         </div>
                     </div>
@@ -70,7 +78,9 @@
                     <div class="services-card">
                         <img src="img/services4.png" alt="">
                         <div class="text">
-                            Полировка
+                            <div class="text-head">
+                                Полировка
+                            </div>
                             <span>Описание Описание Описание...</span>
                         </div>
                     </div>
@@ -79,7 +89,9 @@
                     <div class="services-card">
                         <img src="img/services5.png" alt="">
                         <div class="text">
-                            Локальный ремонт
+                            <div class="text-head">
+                                Локальный ремонт
+                            </div>
                             <span>Описание Описание Описание...</span>
                         </div>
                     </div>
@@ -88,7 +100,9 @@
                     <div class="services-card">
                         <img src="img/services6.png" alt="">
                         <div class="text">
-                            Жестяные работы
+                            <div class="text-head">
+                                Жестяные работы
+                            </div>
                             <span>Описание Описание Описание...</span>
                         </div>
                     </div>
@@ -96,7 +110,10 @@
                 <div class="col-12 col-sm-6 col-md-3 services-block">
                     <div class="services-card">
                         <img src="img/services7.png" alt="">
-                        <div class="text">Замена стекол
+                        <div class="text">
+                            <div class="text-head">
+                                Замена стекол
+                            </div>
                             <span>Описание Описание Описание...</span>
                         </div>
                     </div>
@@ -105,7 +122,9 @@
                     <div class="services-card">
                         <img src="img/services8.png" alt="">
                         <div class="text">
-                            Комплектование запчастями
+                            <div class="text-head">
+                                Комплектование запчастями
+                            </div>
                             <span>Описание Описание Описание...</span>
                         </div>
                     </div>
@@ -285,7 +304,7 @@
             </div>
         </div>
     </div>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e7935eac1b4f3776bec6c61ebdca2d63d58c306f219e54727c7ec001203ad35&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
+    <!--<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e7935eac1b4f3776bec6c61ebdca2d63d58c306f219e54727c7ec001203ad35&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>-->
     <div class="container-fluid footer" id="contact">
         <div class="container d-flex flex-wrap">
             <div class="cols">
