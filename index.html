@@ -2,10 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Ё-авто сервис</title>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
 </head>
 <body>
 
@@ -14,7 +14,10 @@
         <div class="container">
             <header>
                 <div class="row navbar navbar-expand-md navbar-light">
-                    <div class="logo col">Ё-авто сервис</div>
+                    <div class="logo col">
+                        <img src="img/logo.png">
+                        Ё сервис
+                    </div>
                     <div class="menu col collapse navbar-collapse" id="navbarmenu">
                         <div class="item"><a href="#services">Услуги</a></div>
                         <div class="item"><a href="#works">Работы</a></div>
@@ -22,7 +25,7 @@
                         <div class="item"><a href="#prices">Цены</a></div>
                         <div class="item"><a href="#contact">Контакты</a></div>
                     </div>
-                    <div class="tel col">23-11-18 &nbsp 8-909-543-11-18</div>
+                    <div class="tel col"><img src="img/footer1.png" alt="">23-11-18 &nbsp 8-909-543-11-18</div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -134,7 +137,7 @@
     </div>
     <div class="container-fluid call">
         <div class="container">
-            <h2>Позвоните сейчас и запишитесь на бесплатный осмотр</h2>
+            <h2>Оставьте заявку на бесплатный осмотр</h2>
             <input type="button" value="Запись на ремонт" data-toggle="modal" data-target="#exampleModal" class="btn-yellow">
         </div>
     </div>
@@ -202,6 +205,9 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+            <div class="d-flex justify-content-around works-btn">
+                <input type="button" class="btn-yellow" value="Больше работ">
+            </div>
         </div>
     </div>
     <div class="container-fluid advantages" id="advantages">
@@ -213,21 +219,20 @@
             </div>
             <div class="advantages1">
                 <div class="advantages33">
-                <div  class="advantages-block">
-                    <img src="img/advantages1.png" alt="">
-                    <div class="advantages-head">Предварительная<br>оценка по фото<br></div>
-                    <div class="advantages-text">Оперативно и бесплатно доставим ваш автомобиль в техцентр</div>
-                </div>
-                    <h3 class="advantages11">Предварительная<br>оценка по фото</h3></div>
-            </div>
-            <div class="advantages2">
-                <div class="advantages33">
                     <div  class="advantages-block">
                         <img src="img/advantages2.png" alt="">
                         <div class="advantages-head">Бесплатная мойка<br> и чистка авто<br></div>
                         <div class="advantages-text">Оперативно и бесплатно доставим ваш автомобиль в техцентр</div>
                     </div>
                     <h3 class="advantages11">Бесплатная мойка<br> и чистка авто</h3>
+                </div>
+                <div class="advantages33">
+                    <div  class="advantages-block">
+                        <img src="img/advantages1.png" alt="">
+                        <div class="advantages-head">Предварительная<br>оценка по фото<br></div>
+                        <div class="advantages-text">Оперативно и бесплатно доставим ваш автомобиль в техцентр</div>
+                    </div>
+                    <h3 class="advantages11">Предварительная<br>оценка по фото</h3>
                 </div>
                 <div class="advantages33">
                     <div class="advantages-block">
@@ -269,15 +274,20 @@
                 <div class="col-1"></div>
                 <form id="form2" action="./send.php" method="post" class="col-10">
                     <div class="d-flex">
-                        <div class="btns"><input type="text" placeholder="Имя" class="" name="name" form="form2"></div>
-                        <div class="btns"><input type="text" placeholder="Телефон" class="" name="name" form="form2"></div>
+                        <div class="btns"><input type="text" placeholder="Имя" class="input" name="name" form="form2"></div>
+                        <div class="btns"><input type="text" placeholder="Телефон" class="input" name="name" form="form2"></div>
                         <div class="btns-file btns">
-                            <label  class="btn-form">
+                            <label  class="btn-form input">
                                 <input type="file" multiple id="uploaded-file1"/><span id="texts">Выберите файлы</span>
+                                <img src="img/browse.png" alt="">
                             </label>
                         </div>
                     </div>
-                    <div class="btns-t"><textarea placeholder="Описание" class="" name="name" form="form2" ></textarea></div>
+                    <div class="btns-t"><textarea placeholder="Описание" class="input" name="name" form="form2" ></textarea></div>
+                    <input type="checkbox" id="checkbox1" class="check">
+                    <label class="d-block checkbox-form" for="checkbox1">
+                        <div>Я согласен на обработку <a href="#">Персональных данных</a></div>
+                    </label>
                     <input type="submit" class="btn-yellow" value="Отправить" form="form2">
                 </form>
             </div>
@@ -286,7 +296,7 @@
     <div class="container-fluid price" id="prices">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-5">
                     <div class="d-flex justify-content-between flex-wrap">
                         <h2>Цены</h2>
                         <div class="btns">
@@ -304,7 +314,7 @@
             </div>
         </div>
     </div>
-    <!--<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e7935eac1b4f3776bec6c61ebdca2d63d58c306f219e54727c7ec001203ad35&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>-->
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e7935eac1b4f3776bec6c61ebdca2d63d58c306f219e54727c7ec001203ad35&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
     <div class="container-fluid footer" id="contact">
         <div class="container d-flex flex-wrap">
             <div class="cols">
@@ -333,10 +343,16 @@
             <div class="modal-content">
                 <form>
                     <div class="btns">
-                        <input type="text" placeholder="Телефон" class="btn-grey">
+                        <input type="text" placeholder="Имя" class="btn-grey">
                     </div>
                     <div class="btns">
-                        <input type="text" placeholder="Дата и время" class="btn-grey" id="demo" >
+                        <input type="text" placeholder="Телефон" class="btn-grey" >
+                    </div>
+                    <div class="btn-check">
+                        <input type="checkbox" id="checkbox2" class="check">
+                        <label class="d-block checkbox-form" for="checkbox2">
+                            <div>Я согласен на обработку<br><a href="#">Персональных данных</a></div>
+                        </label>
                     </div>
                     <input type="button" value="Записаться" class="btn-yellow">
                 </form>
@@ -347,8 +363,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="js/daterangepicker.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
