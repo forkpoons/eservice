@@ -1,14 +1,16 @@
-let price = [[{name:'бампер', cost:'9 000 р'},{name:'крыло', cost:'3 888 р'},{name:'дверь', cost:'4 555 р'},{name:'бампер', cost:'5 777 р'}],
-    [{name:'крыло', cost:'4 999 р'},{name:'крыло', cost:'5 333 р'},{name:'бампер', cost:'7 444 р'},{name:'дверь', cost:'3 999 р'},{name:'бампер', cost:'8 000 р'}],
-    [{name:'дверь', cost:'7 666 р'},{name:'крыло', cost:'4 888 р'},{name:'дверь', cost:'5 555 р'},{name:'бампер', cost:'2 000 р'}],
-    [{name:'стекло', cost:'1 222 р'},{name:'крыло', cost:'9 777 р'},{name:'крыло', cost:'2 666 р'},{name:'бампер', cost:'9 333 р'}]];
+let price = [[{name:'Покраска бампера (снятие/установка + покраска + расходные материалы)', cost:'7 000 руб'},{name:'Ремонт и покраска кузовных элементов легкой степени повреждения', cost:'7 000 руб'},{name:'Ремонт и покраска капота', cost:'от 8 000 руб'},{name:'Покраска капота (без ремонта)', cost:'8 000 руб'},{name:'Покраска крыши (без ремонта)', cost:'10 000 руб'},{name:'Ремонт и покраска крыши ', cost:'от 15 000 руб'}],
+             [{name:'Полировка одной фары', cost:'500 руб'},{name:'Абразивная полировка деталей (1 шт)', cost:'1000 руб'}],
+             [{name:'Замена лобового/заднего стекла', cost:'от 3 500 руб'},{name:'Замена бокового стекла двери', cost:'от 800 руб'},{name:'Замена бокового зеркала', cost:'от 400 руб'}],
+             [{name:'Демонтаж+монтаж двери', cost:'от 700 руб'},{name:'Демонтаж+монтаж капота/крышки багажника', cost:'от 700 руб'},{name:'Демонтаж+монтаж бампера', cost:'от 500 руб'}],
+             [{name:'Ремонт лонжерона', cost:'от 7 000 руб'},{name:'Ремонт средней стойки', cost:'от 7 000 руб'},{name:'Ремонт порога', cost:'от 7 000 руб'},{name:'Замена порога', cost:'от 12 000 руб'},{name:'Комплексный ремонт передней части автомобиля', cost:'от 20 000 руб'}]
+            ];
 
 const select = document.getElementById('price');
 const items = document.getElementById('price-items');
 let b = '';
 for (let i = 0; i < price[0].length; i++)
 {
-    b += "<div class='price-item'><div class='price-item-1'>"+ price[0][i].name +"</div><div class='price-item-2'>от "+ price[0][i].cost +"</div></div>"
+    b += "<div class='price-item'><div class='price-item-1'>"+ price[0][i].name +"</div><div class='price-item-2'> "+ price[0][i].cost +"</div></div>"
 }
 items.innerHTML = b;
 
@@ -17,7 +19,7 @@ select.onchange = function () {
     b = '';
     for (let i = 0; i < price[a].length; i++)
     {
-        b += "<div class='price-item'><div class='price-item-1'>"+ price[a][i].name +"</div><div class='price-item-2'>от "+ price[a][i].cost +"</div></div>"
+        b += "<div class='price-item'><div class='price-item-1'>"+ price[a][i].name +"</div><div class='price-item-2'> "+ price[a][i].cost +"</div></div>"
     }
     items.innerHTML = b;
 };
