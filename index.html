@@ -145,14 +145,14 @@
             <h2>Запишитесь на бесплатный осмотр по тел. 23-11-18
                 или заполните форму.
             </h2>
-            <form>
+            <form id="form1">
                 <div class="btns">
-                    <input type="text" placeholder="Имя" class="input">
+                    <input type="text" placeholder="Имя" class="input" required id="form1-name">
                 </div>
                 <div class="btns">
-                    <input type="text" placeholder="Телефон" class="input" >
+                    <input type="text" placeholder="Телефон" class="input" required  id="form1-tel">
                 </div>
-                <input type="button" value="Запись на ремонт" class="btn-yellow">
+                <input type="submit" value="Запись на ремонт" class="btn-yellow" id="form1-button">
                 <div class="privicy">Нажимая на кнопку, Вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a></div>
             </form>
         </div>
@@ -291,8 +291,8 @@
                 <div class="col-1"></div>
                 <form id="form2" action="./send.php" method="post" class="col-10">
                     <div class="d-flex">
-                        <div class="btns"><input type="text" placeholder="Имя" class="input" name="name" form="form2"></div>
-                        <div class="btns"><input type="text" placeholder="Телефон" class="input" name="name" form="form2"></div>
+                        <div class="btns"><input type="text" placeholder="Имя" class="input" name="name" form="form2"  required></div>
+                        <div class="btns"><input type="text" placeholder="Телефон" class="input" name="name" form="form2"  required></div>
                         <div class="btns-file btns">
                             <label  class="btn-form input">
                                 <input type="file" multiple id="uploaded-file1"/><span id="texts">Выберите файлы</span>

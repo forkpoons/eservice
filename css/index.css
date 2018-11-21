@@ -95,10 +95,10 @@ a.back {
 
 .btn-primary {
   background: #F6C119;
-  border: 1px solid #F6C119; }
+  border: 1px solid rgba(246, 193, 25, 0.5); }
   .btn-primary:hover, .btn-primary:active {
     background-color: #F6C119 !important;
-    border: 1px solid #F6C119; }
+    border: 1px solid rgba(246, 193, 25, 0.5); }
 
 .container-fluid {
   padding: 0 !important; }
@@ -106,6 +106,9 @@ a.back {
 body {
   font-family: Roboto, serif;
   background: #FFFFFF; }
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px; } }
 
 h1 {
   font-family: "PT Sans Caption", serif;
@@ -126,7 +129,7 @@ h2 {
   color: #4E4B42; }
   @media (max-width: 768px) {
     h2 {
-      font-size: 26px; } }
+      font-size: 19px; } }
 
 h3 {
   font-family: Roboto, serif;
@@ -137,7 +140,7 @@ h3 {
   color: #1B1B1B; }
   @media (max-width: 768px) {
     h3 {
-      font-size: 18px; } }
+      font-size: 16px; } }
 
 .btn-yellow {
   width: 264px;
@@ -189,6 +192,7 @@ h3 {
     padding-bottom: 0; }
   @media (max-width: 768px) {
     .main {
+      background: url("../img/main-m.png") center center;
       height: 600px; }
       .main .container {
         padding-left: 0;
@@ -227,7 +231,8 @@ h3 {
       color: #F6C119; }
       .main header .logo img {
         margin-top: -6px;
-        width: 43px; }
+        width: 43px;
+        margin-right: 10px; }
     .main header .menu {
       justify-content: space-around;
       margin-top: 2px;
@@ -240,7 +245,7 @@ h3 {
           font-size: 36px;
           padding: 139px 0 139px 40px; } }
       .main header .menu .item {
-        margin: 0 5px; }
+        margin: 0 10px; }
         .main header .menu .item a {
           color: #ffffff; }
           .main header .menu .item a:hover {
@@ -288,7 +293,7 @@ h3 {
         width: 100%;
         margin-top: 0;
         position: absolute;
-        top: 150px;
+        top: 190px;
         left: 0;
         text-align: center; } }
   .main .main-h3:nth-child(2n) {
@@ -297,7 +302,7 @@ h3 {
       .main .main-h3:nth-child(2n) {
         width: 100%;
         position: absolute;
-        top: 245px;
+        top: 299px;
         left: 0;
         text-align: center; } }
   .main .main-h3:nth-child(2n-1) {
@@ -308,7 +313,7 @@ h3 {
         display: block;
         width: 100%;
         position: absolute;
-        top: 290px;
+        top: 351px;
         left: 0;
         text-align: center; } }
   .main p {
@@ -319,7 +324,7 @@ h3 {
         display: block;
         width: 100%;
         position: absolute;
-        top: 360px;
+        top: 432px;
         left: 0;
         text-align: center; } }
 
@@ -329,9 +334,9 @@ h3 {
     .services .container {
       width: 100%;
       max-width: none;
-      padding-bottom: 0; } }
-  .services .row {
-    padding-top: 30px; }
+      padding-bottom: 0; }
+      .services .container .row {
+        padding-top: 30px; } }
   .services .services-block {
     margin-top: 80px;
     transition: all 0.3s !important;
@@ -425,7 +430,8 @@ h3 {
       hyphens: manual; }
       @media (max-width: 768px) {
         .services .text span {
-          color: #4F4F4F; } }
+          color: #4F4F4F;
+          padding-bottom: 30px; } }
 
 .call {
   background: url("../img/call-background.png");
@@ -471,7 +477,7 @@ h3 {
   .call .input {
     width: 264px;
     background: #4F4F4F;
-    border: 1px solid #F6C119;
+    border: 1px solid rgba(246, 193, 25, 0.5);
     color: #ffffff;
     padding: 15px 10px;
     outline: none; }
@@ -529,6 +535,8 @@ h3 {
       @media (max-width: 768px) {
         .works .carousel-item-card .card-bottom {
           flex-wrap: wrap; }
+          .works .carousel-item-card .card-bottom-after {
+            margin-top: 30px; }
           .works .carousel-item-card .card-bottom-after, .works .carousel-item-card .card-bottom-before {
             width: 100%;
             text-align: left; } }
@@ -546,6 +554,9 @@ h3 {
     margin-right: 18px; }
   .works-btn {
     margin-top: 80px; }
+    @media (max-width: 768px) {
+      .works-btn a {
+        width: 100%; } }
   .works .btn-yellow {
     background: #F6C119 url("../img/Polygon2.png") no-repeat 85% center !important;
     padding-right: 25px; }
@@ -639,7 +650,7 @@ h3 {
       cursor: pointer; }
     .forms form .input {
       background: #4F4F4F;
-      border: 1px solid #F6C119;
+      border: 1px solid rgba(246, 193, 25, 0.5);
       color: #ffffff;
       padding: 15px 10px;
       outline: none;
@@ -707,7 +718,7 @@ h3 {
     /* for IE */
     -ms-appearance: none;
     appearance: none !important;
-    border: 1px solid #F6C119;
+    border: 1px solid rgba(246, 193, 25, 0.5);
     color: #F6C119;
     padding: 6px;
     outline: none;
@@ -777,7 +788,7 @@ iframe {
       margin: 10px 0; }
     .appointment .modal-content input.btn-grey {
       background: #4F4F4F;
-      border: 1px solid #F6C119;
+      border: 1px solid rgba(246, 193, 25, 0.5);
       color: #ffffff;
       padding: 15px 10px;
       outline: none;
