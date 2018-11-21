@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption|Roboto&subset=cyrillic");
+a.back {
+  color: black; }
+  a.back span {
+    text-decoration: underline;
+    margin-left: 30px; }
+  a.back svg {
+    transform: rotate(180deg); }
+
 .all_works .main {
   height: 135px;
   background: #000; }
@@ -7,13 +15,6 @@
     border: none; }
 .all_works .works_all .container {
   padding-top: 70px; }
-.all_works .works_all a {
-  color: black; }
-  .all_works .works_all a span {
-    text-decoration: underline;
-    margin-left: 30px; }
-  .all_works .works_all a svg {
-    transform: rotate(180deg); }
 .all_works .works_all .headline {
   margin-top: 30px; }
 .all_works .works_all .works_all_blocks {
@@ -61,6 +62,33 @@
         .all_works .works_all .works_all_blocks .works_all_block .block_img {
           width: 100%;
           height: auto; } }
+
+.work .main {
+  background: url("../img/work1.png"); }
+  .work .main .back {
+    color: white;
+    display: block;
+    margin-top: 70px;
+    margin-bottom: 30px; }
+    .work .main .back path {
+      stroke: white; }
+  .work .main h2, .work .main h3 {
+    display: inline; }
+  .work .main h2 {
+    color: #F6C119; }
+  .work .main .main_name {
+    background: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    padding: 35px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    min-width: 300px;
+    max-width: 550px; }
+.work .work-content .headline {
+  margin-bottom: 80px; }
+.work .work-content img {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 40px; }
 
 .color-yellow {
   color: #F6C119; }

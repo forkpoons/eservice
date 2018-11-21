@@ -7,6 +7,13 @@ $light-grey: #4E4B42
 $beige: #FFFFFF
 $white: #ffffff
 
+a.back
+	color: black
+	span
+		text-decoration: underline
+		margin-left: 30px
+	svg
+		transform: rotate(180deg)
 .all_works
 	.main
 		height: 135px
@@ -17,13 +24,6 @@ $white: #ffffff
 	.works_all
 		.container
 			padding-top: 70px
-		a
-			color: black
-			span
-				text-decoration: underline
-				margin-left: 30px
-			svg
-				transform: rotate(180deg)
 		.headline
 			margin-top: 30px
 		.works_all_blocks
@@ -66,3 +66,32 @@ $white: #ffffff
 					@media (max-width: 767.98px)
 						width: 100%
 						height: auto
+.work
+	.main
+		.back
+			color: white
+			display: block
+			margin-top: 70px
+			margin-bottom: 30px
+			path
+				stroke: white
+		background: url("../img/work1.png")
+		h2, h3
+			display: inline
+		h2
+			color: $yellow
+		.main_name
+			background: rgba(255, 255, 255, 0.5)
+			display: inline-block
+			padding: 35px
+			box-shadow: 0 0 5px rgba(255, 255, 255, 0.5)
+			min-width: 300px
+			max-width: 550px
+	.work-content
+		.headline
+			margin-bottom: 80px
+		img
+			width: 100%
+			margin:
+				top: 80px
+				bottom: 40px
