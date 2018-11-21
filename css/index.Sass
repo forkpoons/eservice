@@ -66,6 +66,9 @@ h3
   padding:
     top: 120px
     bottom: 120px
+  @media (max-width: 768px)
+    padding: 60px 15px
+
 .headline
   display: flex
   justify-content: stretch
@@ -85,16 +88,20 @@ h3
 .main
   background: url("../img/main.png") center
   height: 900px
-  @media (max-width: 768px)
-    height: 600px
   .container
     padding-top: 0
     padding-bottom: 0
+  @media (max-width: 768px)
+    height: 600px
+    .container
+      padding-left: 0
+      padding-right: 0
   header
     padding-top: 60px
     border-bottom: 1px solid $yellow
     @media(max-width: 768px)
       padding-top: 5px
+      padding-bottom: 5px
     .navbar-light
       .navbar-toggler-icon
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(246, 193, 25, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
@@ -106,6 +113,11 @@ h3
     @media(max-width: 768px)
       .navbar
         display: block
+        padding:
+          left: 0
+          right: 0
+          bottom: 0
+        margin: 0
         .logo
           display: inline
         .navbar-toggler
@@ -118,11 +130,19 @@ h3
       img
         margin-top: -6px
         width: 43px
+    .collapse:not(.show)
+      display: none !important
+
     .menu
       justify-content: space-around
       margin-top: 2px
-      @media (min-width: 768px)
-        display: flex
+      display: flex
+      @media (max-width: 768px)
+        display: block
+        background: rgba(0, 0, 0, 0.8)
+        z-index: 1000
+        font-size: 36px
+        padding: 139px 0 139px 40px
       .item
         a
           color: $white
@@ -169,12 +189,32 @@ h3
       top: 150px
       left: 0
       text-align: center
-  h3
+  .main-h3:nth-child(2n)
     color: $white
     @media (max-width: 768px)
       width: 100%
       position: absolute
-      top: 240px
+      top: 245px
+      left: 0
+      text-align: center
+  .main-h3:nth-child(2n-1)
+    color: $yellow
+    display: none
+    @media (max-width: 768px)
+      display: block
+      width: 100%
+      position: absolute
+      top: 290px
+      left: 0
+      text-align: center
+  p
+    color: $white
+    display: none
+    @media (max-width: 768px)
+      display: block
+      width: 100%
+      position: absolute
+      top: 360px
       left: 0
       text-align: center
 .services
@@ -183,6 +223,7 @@ h3
     @media (max-width: 768px)
       width: 100%
       max-width: none
+      padding-bottom: 0
   .row
     padding-top: 30px
   .services-block
@@ -197,18 +238,23 @@ h3
       height: 80px
       padding: 0
       margin-top: 0
+      overflow: hidden
+      border: 1px solid $grey2
+      border-bottom: 0
   @media (max-width: 768px)
     .services-block:hover
-      height: 300px
-  .services-card
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25)
-    height: 323px
-    @media (max-width: 1200px)
-      height: 270px
-    @media (max-width: 991.98px)
-      height: 213px
-    @media (max-width: 768px)
-      height: 80px
+      height: max-content
+      min-height: 150px
+      .text-head
+        background: url("../img/Polygon3.png") no-repeat 90% center
+  @media (min-width: 768px)
+    .services-card
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25)
+      height: 323px
+      @media (max-width: 1200px)
+        height: 270px
+      @media (max-width: 991.98px)
+        height: 213px
   img
     width: 100%
     height: auto
@@ -229,12 +275,16 @@ h3
     overflow: hidden
     @media (max-width: 768px)
       height: max-content
+      background: $white
     .text-head
       height: 80px
       width: 100%
       display: flex
       align-items: center
       justify-content: center
+      @media (max-width: 768px)
+        background: url("../img/Polygon.png") no-repeat 90% center
+
     &:hover
       height: 324px
       top: -244px
@@ -245,7 +295,7 @@ h3
         height: 223px
         top: -143px
       @media (max-width: 768px)
-        height: 309px
+        height: max-content
         top: 0
     span
       display: flex
@@ -256,6 +306,8 @@ h3
       text-align: left
       line-height: 19px
       hyphens: manual
+      @media (max-width: 768px)
+        color: $grey2
 .call
   @media (min-width: 1200px)
     .container
@@ -316,12 +368,19 @@ h3
   .carousel-inner
     background: $grey2
     border: 1px solid $yellow
+  @media (max-width: 768px)
+    .carousel
+      padding: 0
+    .carousel-inner
+      border: none
   .carousel-item-card
     height: 600px
     display: flex
     flex-direction: column
     justify-content: space-between
     color: $white
+    @media (max-width: 768px)
+      height: max-content
     .card-top
       width: 100%
       padding: 40px
@@ -331,13 +390,22 @@ h3
         width: 50%
       img:nth-child(1)
         border-right: 1px solid $yellow
+      @media (max-width: 768px)
+        flex-wrap: wrap
+        img
+          width: 100%
     .card-bottom
       display: flex
       width: 100%
       justify-content: space-between
       padding: 40px
-      .card-22
+      &-after
         text-align: right
+      @media (max-width: 768px)
+        flex-wrap: wrap
+        &-after, &-before
+          width: 100%
+          text-align: left
   .carousel-control-prev, .carousel-control-next
     opacity: 1
   .carousel-control-prev-icon
