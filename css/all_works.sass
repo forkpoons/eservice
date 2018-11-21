@@ -1,0 +1,68 @@
+$yellow: #F6C119
+$black: #111111
+$grey: #1B1B1B
+$grey3: #444444
+$grey2: #4F4F4F
+$light-grey: #4E4B42
+$beige: #FFFFFF
+$white: #ffffff
+
+.all_works
+	.main
+		height: 135px
+		background: #000
+		header
+			padding-top: 46px
+			border: none
+	.works_all
+		.container
+			padding-top: 70px
+		a
+			color: black
+			span
+				text-decoration: underline
+				margin-left: 30px
+			svg
+				transform: rotate(180deg)
+		.headline
+			margin-top: 30px
+		.works_all_blocks
+			margin: 40px 0
+			display: flex
+			flex-flow: wrap
+			justify-content: space-between
+			.works_all_block
+				width: 49%
+				margin: 40px 0
+				@media (max-width: 767.98px)
+					width: 100%
+				.block_text
+					background: $grey2
+					padding: 30px
+					color: $white
+					h3
+						color: $yellow
+					a
+						color: $white
+						text-decoration: underline
+					p
+						margin-bottom: 5px
+					svg
+						margin-left: 30px
+				.block_img
+					width: 100%
+					height: 417px
+					text-align: center
+					overflow: hidden
+					img
+						height: 100%
+						@media (max-width: 767.98px)
+							width: 100%
+							height: auto
+					@media (max-width: 1199.98px)
+						height: 350px
+					@media (max-width: 991.98px)
+						height: 260px
+					@media (max-width: 767.98px)
+						width: 100%
+						height: auto
