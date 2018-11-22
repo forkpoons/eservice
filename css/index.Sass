@@ -48,12 +48,12 @@ h3
   font-weight: normal
   line-height: normal
   font-size: 24px
-  color: $grey
+  color: $black
   @media (max-width: 768px)
     font-size: 16px
 .btn-yellow
   width: 264px
-  height: 60px
+  height: 63px
   border: none
   background: $yellow !important
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2)
@@ -97,16 +97,17 @@ h3
     padding-bottom: 0
   @media (max-width: 768px)
     background: url("../img/main-m.png") center center
-    height: 600px
+    height: 640px
     .container
       padding-left: 0
       padding-right: 0
   header
     padding-top: 60px
+    padding-bottom: 22px
     border-bottom: 1px solid $yellow
     @media(max-width: 768px)
       padding-top: 5px
-      padding-bottom: 5px
+      padding-bottom: 8px
     .navbar-light
       .navbar-toggler-icon
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(246, 193, 25, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
@@ -133,7 +134,10 @@ h3
       justify-content: space-around
       flex-wrap: wrap
     .logo
-      color: $yellow
+      a
+        color: $yellow
+      a:hover
+        text-decoration: none
       img
         margin-top: -6px
         width: 43px
@@ -147,7 +151,7 @@ h3
         background: rgba(0, 0, 0, 0.8)
         z-index: 1000
         font-size: 36px
-        padding: 139px 0 139px 40px
+        padding: 152px 0 166px 40px
       .item
         a
           color: $white
@@ -163,10 +167,10 @@ h3
       font-size: 20px
       color: $yellow
       margin-top: 2px
-      min-width: 355px
+      min-width: 390px
       svg
         height: 26px
-        margin-right: 5px
+        margin-right: 15px
         path
           fill: $yellow
       @media (min-width: 1200px)
@@ -185,7 +189,7 @@ h3
     @media (max-width: 991.98px)
       display: none
   h1
-    margin-top: 96px
+    margin-top: 130px
     margin-bottom: 20px
     @media (max-width: 768px)
       width: 100%
@@ -194,6 +198,8 @@ h3
       top: 190px
       left: 0
       text-align: center
+  h3
+    color: white
   .main-h3:nth-child(2n)
     color: $white
     @media (max-width: 768px)
@@ -222,6 +228,16 @@ h3
       top: 432px
       left: 0
       text-align: center
+  .btn-yellow
+    margin-top: 20px
+    @media (max-width: 768px)
+      display: block
+      width: 80vw
+      position: absolute
+      top: 482px
+      text-align: center
+      margin: 0 auto
+      left: 10vw
 .services
   background: $beige
   .container
@@ -238,7 +254,7 @@ h3
     @media (max-width: 1200px)
       height: 270px
     @media (max-width: 991.98px)
-      height: 213px
+      height: 395px
     @media (max-width: 768px)
       height: 80px
       padding: 0
@@ -328,6 +344,15 @@ h3
     justify-content: space-between
     flex-wrap: wrap
     margin-top: 50px
+    @media (max-width: 992px)
+      justify-content: center
+      .btns
+        width: 80%
+        margin-top: 20px
+      .input
+        width: 100%
+      .btn-yellow
+        margin-top: 20px
     @media (max-width: 768px)
       margin-top: 10px
     .privicy
@@ -340,7 +365,7 @@ h3
         text-decoration: underline
   .btn-yellow
     width: 274px
-    height: 66px
+    height: 63px
     @media (max-width: 768px)
       margin-top: 20px
       width: 100%
@@ -350,7 +375,7 @@ h3
     display: inline-block
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     @media (max-width: 768px)
-      width: 100%
+      width: 100% !important
       margin-top: 20px
   .input
     width: 264px
@@ -360,14 +385,27 @@ h3
     padding: 15px 10px
     outline: none
     @media (max-width: 768px)
-      width: calc(100% - 10px)
+      width: 100%
+      padding: 7px 10px
 
 .works
   background: url("../img/works-background.png")
+  a, a:hover
+    text-decoration: none
+  &-line
+    width: 1px
+    background: $yellow
+    height: 600px
+    position: relative
+    top: -141px
+    @media (max-width: 768px)
+      display: none
   h2
     color: $white
   .headline
     margin-bottom: 60px
+    @media (max-width: 768px)
+      margin-bottom: 30px
   .carousel
     padding: 15px
     background: $grey2
@@ -394,8 +432,6 @@ h3
       display: flex
       img
         width: 50%
-      img:nth-child(1)
-        border-right: 1px solid $yellow
       @media (max-width: 768px)
         flex-wrap: wrap
         img
@@ -407,7 +443,10 @@ h3
       padding: 40px
       &-after
         text-align: right
+      &-after, &-before
+        width: 50%
       @media (max-width: 768px)
+        padding: 20px
         flex-wrap: wrap
         &-after
           margin-top: 30px
@@ -439,6 +478,8 @@ h3
   .container
     background: url("../img/advantages.png") no-repeat center 465px
     background-size: auto
+    @media (max-width: 992px)
+      background-size: contain
     @media (max-width: 768px)
       background: $beige
   &-line1
@@ -447,16 +488,51 @@ h3
     margin-top: 60px
     .advantages-blocks:nth-child(2n-1)
       margin-top: 180px
+      @media (max-width: 1200px)
+        margin-top: 85px
+    @media (max-width: 768px)
+      flex-wrap: wrap
+      margin-top: 30px
+      .advantages-blocks
+        width: 100%
+        margin-top: 20px !important
+
   &-line2
     display: flex
     justify-content: space-around
     margin-top: 300px
+    @media (max-width: 1200px)
+      margin-top: 395px
+    @media (max-width: 768px)
+      flex-wrap: wrap
+      margin-top: 0
+      .advantages-blocks
+        width: 100%
+        margin-top: 20px !important
   &11
     position: relative
     text-align: center
     margin-top: 20px
+    @media (max-width: 768px)
+      background: url("../img/Polygon.png") no-repeat 90% 10px
+      text-align: left
+      left: 115px
+      top: -80px
+      width: calc(100% - 130px)
   &-blocks
     width: 300px
+    @media (max-width: 768px)
+      height: 100px
+      &:hover
+        height: max-content
+        .advantages-text
+          color: $black
+          display: block
+          width: 90vw
+          margin-top: 30px
+          text-align: left
+          .advantages11
+            background: url("../img/Polygon3.png") no-repeat 90% 10px
   &-block
     position: relative
     width: 100px
@@ -471,6 +547,9 @@ h3
       left: auto
       right: auto
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+    @media (max-width: 768px)
+      overflow: visible
+      margin-left: 0
     .advantages-head
       display: none
       color: $yellow
@@ -483,21 +562,23 @@ h3
     img
       margin-top: 25px
       height: 50px
-    &:hover
-      width: 280px
-      height: 250px
-      border-radius: 19px
-      margin-left: auto
-      margin-right: auto
-      padding: 20px !important
-      color: $yellow
-      margin-bottom: -150px
-      .advantages-head
-        display: inline
-      .advantages-text
-        display: block
-      img
-        display: none
+    @media (min-width: 768px)
+      &:hover
+        width: 280px
+        height: 225px
+        border-radius: 19px
+        margin-left: auto
+        margin-right: auto
+        padding: 20px !important
+        color: $yellow
+        margin-bottom: -150px
+        .advantages-head
+          display: inline
+        .advantages-text
+          display: block
+        img
+          display: none
+
 .carousel-control-prev
   justify-content: left
 .carousel-control-next
@@ -509,6 +590,8 @@ h3
     color: $white
   form
     margin-top: 40px
+    @media (max-width: 768px)
+      margin-top: 10px
     .privicy
       color: $white
       font-size: 14px
@@ -528,6 +611,8 @@ h3
       padding: 15px 10px
       outline: none
       width: 264px
+      @media (max-width: 768px)
+        padding: 7px 10px
       span
         color: $yellow
       img
@@ -552,6 +637,7 @@ h3
       margin-top: 40px
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
       @media (max-width: 768px)
+        margin-top: 20px
         width: 100%
     .btns-t
       display: block
@@ -568,16 +654,23 @@ h3
   background: $grey2
   height: 710px
   color: $white
-  @media (min-width: 768px)
+  @media (min-width: 992px)
     background: $grey2 url("../img/price-background.png") 50vw center no-repeat
   h2
     color: $white
+    @media (max-width: 767.98px)
+      width: 100%
+      text-align: center
   .d-flex
     margin-bottom: 60px
+    @media (max-width: 768px)
+      margin: 0
   .btns
     padding: 5px
     background: $grey3
-    height: 45px
+    @media (max-width: 768px)
+      padding: 3px
+      margin: 20px auto 0
   .select
     /*for WebKit*/
     -webkit-appearance: none
@@ -593,8 +686,10 @@ h3
     padding: 6px
     outline: none
     width: 264px
-    height: 34px
+    height: 53px
     background: $grey3 url('../img/Polygon.png') no-repeat 95% center
+    @media (max-width: 768px)
+      height: 40px
     option
       color: $white
   &-items
@@ -604,7 +699,7 @@ h3
   &-item
     display: flex
     justify-content: space-between
-    border-bottom: 1px solid $yellow
+    border-bottom: $border-y
     padding: 15px 0 5px
     &-1
       flex-shrink: 3
@@ -619,26 +714,44 @@ h3
   background: $grey
   color: $white
   font-size: 14px
+  a
+    color: $white
+  a:hover
+    text-decoration: none
+    color: $yellow
   &.container-fluid
     padding:
       left: 15px !important
       right: 15px !important
   .logo
     font-size: 16px
+    a
+      color: $yellow
     img
       margin-right: 10px
       width: 45px
   .container
-    padding: 80px 0
+    padding: 80px 0 40px
     display: flex
     justify-content: space-between
     .item
       margin-top: 20px
+      &.polt
+        text-decoration: underline
     .contact
       img
         margin-right: 10px
+  .logo_ds
+    margin: 0 auto 0
+    padding-bottom: 40px
+    width: 160px
+    a:hover
+      color: white
+      text-decoration: underline
 iframe
   margin-bottom: -10px
+  @media (max-width: 768px)
+    display: none
 
 .appointment
   width: 400px
@@ -656,6 +769,8 @@ iframe
       background: $grey2
       display: inline-block
       margin: 10px 0
+      @media (max-width: 768px)
+        padding: 3px
     .btn-check
       margin: 10px 0
     input.btn-grey
@@ -665,6 +780,8 @@ iframe
       padding: 15px 10px
       outline: none
       width: 290px
+      @media (max-width: 768px)
+        padding: 7px 10px
     .btn-yellow
       margin: 20px 20px 5px
       width: calc( 100% - 40px)
